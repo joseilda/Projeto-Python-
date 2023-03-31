@@ -1,0 +1,22 @@
+import random
+
+jogo_damas = random.randint(1,  6)
+tentativas  = 1
+
+while tentativas  < 3:
+    palpite = int(input("Adivinhe o numero (entre 1 e 6): "))
+    tentativas  += 1
+    
+    if palpite == jogo_damas:
+        print("Parabéns!Você acertou o número de damas em", tentativas, "tentativa(s )!")
+        break 
+    
+    elif palpite < jogo_damas:
+        print("O número do jogo de damas é maior que", palpite)
+    else:
+        print("O número do jogo de damas é menor que", palpite)
+        
+    if tentativas == 3:
+        print("Que pena! Você não conseguiu advinhar o número de damas. O número era", jogo_damas)
+        
+    
